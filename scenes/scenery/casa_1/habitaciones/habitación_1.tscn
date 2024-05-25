@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyviw3t3f4f2q"]
+[gd_scene load_steps=5 format=3 uid="uid://cyviw3t3f4f2q"]
 
-[ext_resource type="Texture2D" uid="uid://v180oumr8vxa" path="res://icon.svg" id="1_wvvr5"]
+[ext_resource type="Texture2D" uid="uid://v180oumr8vxa" path="res://icon.svg" id="1_ne0xg"]
+[ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="2_afeg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co7ml"]
 size = Vector2(37, 235)
@@ -14,7 +15,7 @@ size = Vector2(43, 146)
 modulate = Color(0, 0, 0, 1)
 position = Vector2(576, 321.5)
 scale = Vector2(9.78125, 5.66406)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="limite" type="StaticBody2D" parent="."]
 position = Vector2(-7, 282)
@@ -28,7 +29,7 @@ shape = SubResource("RectangleShape2D_co7ml")
 modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.5, -0.5)
 scale = Vector2(0.34375, 1.875)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="limite2" type="StaticBody2D" parent="."]
 position = Vector2(1167, 317)
@@ -42,7 +43,7 @@ shape = SubResource("RectangleShape2D_co7ml")
 modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.5, -0.5)
 scale = Vector2(0.34375, 1.875)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="limite3" type="StaticBody2D" parent="."]
 position = Vector2(562, 662)
@@ -57,7 +58,7 @@ shape = SubResource("RectangleShape2D_co7ml")
 modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.5, -0.5)
 scale = Vector2(0.34375, 1.875)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="limite4" type="StaticBody2D" parent="."]
 position = Vector2(562, -16)
@@ -72,7 +73,7 @@ shape = SubResource("RectangleShape2D_co7ml")
 modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.5, -0.5)
 scale = Vector2(0.34375, 1.875)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="Puerta" type="StaticBody2D" parent="."]
 position = Vector2(0, 310)
@@ -80,8 +81,11 @@ position = Vector2(0, 310)
 [node name="Sprite2D" type="Sprite2D" parent="Puerta"]
 modulate = Color(0, 0, 1, 1)
 scale = Vector2(0.36, 1.16)
-texture = ExtResource("1_wvvr5")
+texture = ExtResource("1_ne0xg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_e2o6a")
+
+[node name="Player" parent="." instance=ExtResource("2_afeg6")]
+position = Vector2(602, 408)
