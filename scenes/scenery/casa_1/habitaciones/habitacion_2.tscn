@@ -1,3 +1,62 @@
-[gd_scene format=3 uid="uid://5mfw38txtgmu"]
+[gd_scene load_steps=5 format=3 uid="uid://5mfw38txtgmu"]
+
+[ext_resource type="Texture2D" uid="uid://5ll3o0cnw0bl" path="res://assets/piso.png" id="1_11203"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfd2i"]
+size = Vector2(198, 164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8w2v"]
+size = Vector2(1159, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4sfu"]
+size = Vector2(20, 497)
 
 [node name="Habitacion2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 326.25)
+scale = Vector2(2.34747, 1.52331)
+texture = ExtResource("1_11203")
+
+[node name="Limites" type="Node" parent="."]
+
+[node name="Limite" type="StaticBody2D" parent="Limites"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite"]
+position = Vector2(81, 72)
+shape = SubResource("RectangleShape2D_wfd2i")
+
+[node name="Limite_1" type="StaticBody2D" parent="Limites"]
+position = Vector2(572, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_1"]
+position = Vector2(-5, 22)
+shape = SubResource("RectangleShape2D_l8w2v")
+
+[node name="Limite_2" type="StaticBody2D" parent="Limites"]
+position = Vector2(573, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_2"]
+position = Vector2(5.5, 655)
+shape = SubResource("RectangleShape2D_l8w2v")
+
+[node name="Limite_3" type="StaticBody2D" parent="Limites"]
+position = Vector2(974, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_3"]
+position = Vector2(89, 72)
+shape = SubResource("RectangleShape2D_wfd2i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limites"]
+position = Vector2(-7, 408)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_j4sfu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Limites"]
+position = Vector2(1160, 405)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D2"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_j4sfu")
