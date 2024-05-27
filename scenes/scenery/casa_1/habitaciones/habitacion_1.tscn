@@ -75,27 +75,27 @@ position = Vector2(-2.08652, -0.5)
 scale = Vector2(0.318961, 1.875)
 texture = ExtResource("1_ne0xg")
 
-[node name="Puerta" type="StaticBody2D" parent="."]
+[node name="Puerta_H2" type="StaticBody2D" parent="."]
 position = Vector2(0, 310)
 
-[node name="Sprite2D" type="Sprite2D" parent="Puerta"]
+[node name="Sprite2D" type="Sprite2D" parent="Puerta_H2"]
 modulate = Color(0, 0, 1, 1)
 scale = Vector2(0.36, 1.16)
 texture = ExtResource("1_ne0xg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H2"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_e2o6a")
 
-[node name="Puerta2" type="StaticBody2D" parent="."]
+[node name="Puerta_H4" type="StaticBody2D" parent="."]
 position = Vector2(505, 99)
 
-[node name="Sprite2D" type="Sprite2D" parent="Puerta2"]
+[node name="Sprite2D" type="Sprite2D" parent="Puerta_H4"]
 modulate = Color(0, 0, 1, 1)
 scale = Vector2(0.36, 1.16)
 texture = ExtResource("1_ne0xg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H4"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_e2o6a")
 
