@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://5mfw38txtgmu"]
+[gd_scene load_steps=8 format=3 uid="uid://5mfw38txtgmu"]
 
 [ext_resource type="Texture2D" uid="uid://5ll3o0cnw0bl" path="res://assets/piso.png" id="1_11203"]
-[ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/puerta_H1.gd" id="2_61286"]
-[ext_resource type="Texture2D" uid="uid://dxmec26ebogq4" path="res://assets/puerta.jpeg" id="2_r60t8"]
+[ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_agv3b"]
 [ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="3_3k6rq"]
+[ext_resource type="PackedScene" uid="uid://0ec2blm5og34" path="res://scenes/puertas/puerta.tscn" id="3_t07p7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfd2i"]
 size = Vector2(198, 164)
@@ -14,14 +14,8 @@ size = Vector2(1159, 136)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4sfu"]
 size = Vector2(20, 497)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lde6b"]
-size = Vector2(85, 216)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4dh4"]
-radius = 55.0
-height = 272.0
-
 [node name="Habitacion2" type="Node2D"]
+script = ExtResource("1_agv3b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(574, 326.25)
@@ -71,48 +65,17 @@ position = Vector2(1160, 405)
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_j4sfu")
 
-[node name="Puerta_H1" type="StaticBody2D" parent="."]
-position = Vector2(1151, 387)
-script = ExtResource("2_61286")
+[node name="habitacion_1" parent="." instance=ExtResource("3_t07p7")]
+position = Vector2(1158, 382)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H1"]
-position = Vector2(-5.5, 0)
-shape = SubResource("RectangleShape2D_lde6b")
-
-[node name="Sprite2D" type="Sprite2D" parent="Puerta_H1"]
-position = Vector2(-6, 0)
-scale = Vector2(0.56, 0.680001)
-texture = ExtResource("2_r60t8")
-
-[node name="Area2D" type="Area2D" parent="Puerta_H1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H1/Area2D"]
-position = Vector2(-4, 0)
-shape = SubResource("CapsuleShape2D_k4dh4")
-
-[node name="Puerta_H3" type="StaticBody2D" parent="."]
-position = Vector2(600, 633)
-rotation = 1.5708
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H3"]
-position = Vector2(-5.5, 0)
-shape = SubResource("RectangleShape2D_lde6b")
-
-[node name="Sprite2D" type="Sprite2D" parent="Puerta_H3"]
-position = Vector2(-6, 0)
-scale = Vector2(0.56, 0.680001)
-texture = ExtResource("2_r60t8")
-
-[node name="Area2D" type="Area2D" parent="Puerta_H3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H3/Area2D"]
-position = Vector2(-4, 0)
-shape = SubResource("CapsuleShape2D_k4dh4")
+[node name="habitacion_2" parent="." instance=ExtResource("3_t07p7")]
+position = Vector2(1, 527)
 
 [node name="Player" parent="." instance=ExtResource("3_3k6rq")]
-position = Vector2(1030, 386)
+position = Vector2(1043, 391)
 
-[connection signal="body_entered" from="Puerta_H1/Area2D" to="Puerta_H1" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Puerta_H1/Area2D" to="Puerta_H1" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Puerta_H3/Area2D" to="Puerta_H3" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Puerta_H3/Area2D" to="Puerta_H3" method="_on_area_2d_body_exited"]
+[node name="Habitacion1Pos" type="Marker2D" parent="."]
+position = Vector2(1042, 393)
+
+[node name="Habitacion3Pos" type="Marker2D" parent="."]
+position = Vector2(89, 526)

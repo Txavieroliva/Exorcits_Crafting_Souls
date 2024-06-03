@@ -1,20 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyviw3t3f4f2q"]
+[gd_scene load_steps=6 format=3 uid="uid://cyviw3t3f4f2q"]
 
+[ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_877jq"]
 [ext_resource type="Texture2D" uid="uid://v180oumr8vxa" path="res://icon.svg" id="1_ne0xg"]
 [ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="2_afeg6"]
-[ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/puerta_H2.gd" id="2_nt8qd"]
+[ext_resource type="PackedScene" uid="uid://0ec2blm5og34" path="res://scenes/puertas/puerta.tscn" id="4_rwwf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_co7ml"]
 size = Vector2(37, 235)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6a"]
-size = Vector2(43, 146)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2r05a"]
-radius = 29.0
-height = 168.0
-
-[node name="Habitación1" type="Node2D"]
+[node name="Habitacion1" type="Node2D"]
+script = ExtResource("1_877jq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -80,38 +75,18 @@ position = Vector2(-2.08652, -0.5)
 scale = Vector2(0.318961, 1.875)
 texture = ExtResource("1_ne0xg")
 
-[node name="Puerta_H2" type="StaticBody2D" parent="."]
-position = Vector2(0, 310)
-script = ExtResource("2_nt8qd")
-
-[node name="Sprite2D" type="Sprite2D" parent="Puerta_H2"]
-modulate = Color(0, 0, 1, 1)
-scale = Vector2(0.36, 1.16)
-texture = ExtResource("1_ne0xg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H2"]
-position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_e2o6a")
-
-[node name="Area2D" type="Area2D" parent="Puerta_H2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H2/Area2D"]
-shape = SubResource("CapsuleShape2D_2r05a")
-
-[node name="Puerta_H4" type="StaticBody2D" parent="."]
-position = Vector2(505, 99)
-
-[node name="Sprite2D" type="Sprite2D" parent="Puerta_H4"]
-modulate = Color(0, 0, 1, 1)
-scale = Vector2(0.36, 1.16)
-texture = ExtResource("1_ne0xg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta_H4"]
-position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_e2o6a")
-
 [node name="Player" parent="." instance=ExtResource("2_afeg6")]
-position = Vector2(70, 314)
+position = Vector2(515, 378)
 
-[connection signal="body_entered" from="Puerta_H2/Area2D" to="Puerta_H2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Puerta_H2/Area2D" to="Puerta_H2" method="_on_area_2d_body_exited"]
+[node name="Habitacion2Pos" type="Marker2D" parent="."]
+position = Vector2(75, 370)
+
+[node name="Habitacion4Pos" type="Marker2D" parent="."]
+position = Vector2(508, 201)
+
+[node name="habitacion_4" parent="." instance=ExtResource("4_rwwf4")]
+position = Vector2(501, 98)
+scale = Vector2(0.659353, 0.699937)
+
+[node name="habitacion_2" parent="." instance=ExtResource("4_rwwf4")]
+position = Vector2(-17, 356)

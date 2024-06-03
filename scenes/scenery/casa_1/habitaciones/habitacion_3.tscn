@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://o626vrwkeuqc"]
+[gd_scene load_steps=2 format=3 uid="uid://o626vrwkeuqc"]
+
+[ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_gantr"]
 
 [node name="Habitacion3" type="Node2D"]
+script = ExtResource("1_gantr")

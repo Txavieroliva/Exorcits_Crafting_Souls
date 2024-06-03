@@ -14,3 +14,7 @@ config/name="Exorcist: Crafting Souls"
 run/main_scene="res://scenes/scenery/casa_1/habitaciones/habitacion_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scenes/Global/global.tscn"
