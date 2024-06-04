@@ -66,16 +66,19 @@ position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_j4sfu")
 
 [node name="habitacion_1" parent="." instance=ExtResource("3_t07p7")]
-position = Vector2(1158, 382)
+position = Vector2(1060, 96)
+scale = Vector2(-0.981128, 0.558589)
 
-[node name="habitacion_2" parent="." instance=ExtResource("3_t07p7")]
-position = Vector2(1, 527)
+[node name="habitacion_3" parent="." instance=ExtResource("3_t07p7")]
+position = Vector2(91, 79)
+scale = Vector2(1, 0.717172)
 
 [node name="Player" parent="." instance=ExtResource("3_3k6rq")]
 position = Vector2(1043, 391)
 
 [node name="Habitacion1Pos" type="Marker2D" parent="."]
-position = Vector2(1042, 393)
+position = Vector2(1058, 173)
+scale = Vector2(0.772152, 1)
 
 [node name="Habitacion3Pos" type="Marker2D" parent="."]
-position = Vector2(89, 526)
+position = Vector2(81, 182)

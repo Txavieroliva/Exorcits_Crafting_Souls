@@ -1,6 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://o626vrwkeuqc"]
+[gd_scene load_steps=6 format=3 uid="uid://bccwkx51hom3y"]
 
 [ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_gantr"]
+[ext_resource type="PackedScene" uid="uid://bd05y8cbmdosg" path="res://scenes/scenery/Limite/limite_habitacion_4.tscn" id="2_752y2"]
+[ext_resource type="Texture2D" uid="uid://v180oumr8vxa" path="res://icon.svg" id="3_54dci"]
+[ext_resource type="PackedScene" uid="uid://0ec2blm5og34" path="res://scenes/puertas/puerta.tscn" id="3_uyphq"]
+[ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="4_fgsm5"]
 
 [node name="Habitacion3" type="Node2D"]
 script = ExtResource("1_gantr")
+
+[node name="limite" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(11, 318)
+scale = Vector2(1.8354, 2.36259)
+
+[node name="limite2" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(538, 50)
+scale = Vector2(24.6117, 0.530338)
+
+[node name="limite3" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(277, 431)
+scale = Vector2(1.98883, 1.68747)
+
+[node name="limite4" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(155, 594)
+scale = Vector2(7.93596, -0.460405)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(582.5, 329.5)
+scale = Vector2(8.97656, 5.05469)
+texture = ExtResource("3_54dci")
+
+[node name="Player" parent="." instance=ExtResource("4_fgsm5")]
+position = Vector2(515, 378)
+
+[node name="Habitacion2Pos" type="Marker2D" parent="."]
+position = Vector2(153, 517)
+
+[node name="habitacion_2" parent="." instance=ExtResource("3_uyphq")]
+z_index = 1
+position = Vector2(147, 583)
+rotation = -3.13783
+scale = Vector2(0.981255, 0.41928)
+
+[node name="limite5" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(657, 273)
+scale = Vector2(16.9698, -0.417414)
+
+[node name="limite6" parent="." instance=ExtResource("2_752y2")]
+position = Vector2(966, 179)
+scale = Vector2(3.83651, 1.12274)
+
+[node name="habitacion_4" parent="." instance=ExtResource("3_uyphq")]
+z_index = 1
+position = Vector2(948, 167)
+rotation = 0.0053714
+scale = Vector2(1.32769, 0.564562)
+skew = 0.00719917
+
+[node name="Habitacion4Pos" type="Marker2D" parent="."]
+position = Vector2(818, 170)
