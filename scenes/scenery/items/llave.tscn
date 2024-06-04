@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://di8onw77mglv1"]
+
+[ext_resource type="Texture2D" uid="uid://2py2bhhkcbr7" path="res://assets/boton_sin_presionar.png" id="1_uk6ju"]
+[ext_resource type="Texture2D" uid="uid://ltit5q08hbe8" path="res://assets/boton_presionado.png" id="2_nescr"]
+[ext_resource type="Texture2D" uid="uid://dldyprnjosmdr" path="res://assets/llave.png" id="3_23k6q"]
+
+[node name="llave" type="TextureButton"]
+offset_left = -64.0
+offset_top = 62.0
+offset_right = -24.0
+offset_bottom = 102.0
+scale = Vector2(-0.17401, 0.198105)
+texture_normal = ExtResource("1_uk6ju")
+texture_pressed = ExtResource("2_nescr")
+
+[node name="objeto base" type="Sprite2D" parent="."]
+position = Vector2(270.099, 212.009)
+rotation = -0.60885
+scale = Vector2(-0.794177, 0.608233)
+texture = ExtResource("3_23k6q")

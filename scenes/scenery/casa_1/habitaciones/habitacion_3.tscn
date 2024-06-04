@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bccwkx51hom3y"]
+[gd_scene load_steps=7 format=3 uid="uid://bccwkx51hom3y"]
 
 [ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_gantr"]
 [ext_resource type="PackedScene" uid="uid://bd05y8cbmdosg" path="res://scenes/scenery/Limite/limite_habitacion_4.tscn" id="2_752y2"]
 [ext_resource type="Texture2D" uid="uid://v180oumr8vxa" path="res://icon.svg" id="3_54dci"]
 [ext_resource type="PackedScene" uid="uid://0ec2blm5og34" path="res://scenes/puertas/puerta.tscn" id="3_uyphq"]
 [ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="4_fgsm5"]
+[ext_resource type="PackedScene" uid="uid://di8onw77mglv1" path="res://scenes/scenery/items/llave.tscn" id="6_xogq0"]
 
 [node name="Habitacion3" type="Node2D"]
 script = ExtResource("1_gantr")
@@ -26,7 +27,7 @@ position = Vector2(155, 594)
 scale = Vector2(7.93596, -0.460405)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0.227451, 0.188235, 0.345098, 1)
 z_index = -1
 position = Vector2(582.5, 329.5)
 scale = Vector2(8.97656, 5.05469)
@@ -61,3 +62,9 @@ skew = 0.00719917
 
 [node name="Habitacion4Pos" type="Marker2D" parent="."]
 position = Vector2(818, 170)
+
+[node name="llave" parent="." instance=ExtResource("6_xogq0")]
+offset_left = 160.0
+offset_top = 102.0
+offset_right = 716.0
+offset_bottom = 558.0
