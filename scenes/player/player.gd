@@ -20,7 +20,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func agarrar_item(item_agarrado):
-#consigue referencia de la escena del ancestro
+#consigue referencia de la escena del nodo padre
 				#var item = preload("res://scenes/scenery/items/" + item_agarrado + ".tscn") 
 #Instancia la escena como nodo hijo de un contenedor de items.
 			#item = item.instantiate()
