@@ -13,18 +13,26 @@ metadata/_edit_horizontal_guides_ = [-359.0]
 [node name="limite" parent="." instance=ExtResource("2_j82a2")]
 position = Vector2(11, 318)
 scale = Vector2(1.8354, 2.36259)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite2" parent="." instance=ExtResource("2_j82a2")]
 position = Vector2(550, 98)
 scale = Vector2(26.1115, 0.867826)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite3" parent="." instance=ExtResource("2_j82a2")]
 position = Vector2(1129, 295)
 scale = Vector2(1.23289, 2.96103)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite4" parent="." instance=ExtResource("2_j82a2")]
 position = Vector2(559, 605)
 scale = Vector2(26.8356, -0.347326)
+collision_layer = 4
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.14902, 0.14902, 0.14902, 1)

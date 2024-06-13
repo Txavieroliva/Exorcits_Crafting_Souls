@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxrup2ud2h7hw"
-path="res://.godot/imported/gb_Creature1-removebg-preview.png-b3c26f908b1ba82eb63f7f2e1e0bf45d.ctex"
+path="res://.godot/imported/gb_Creature1-removebg-preview.png-cbcba1ecbca1d032642a367cf6fe4ea3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gb_Creature1-removebg-preview.png"
-dest_files=["res://.godot/imported/gb_Creature1-removebg-preview.png-b3c26f908b1ba82eb63f7f2e1e0bf45d.ctex"]
+source_file="res://scenes/enemigos/alma_en_pena/gb_Creature1-removebg-preview.png"
+dest_files=["res://.godot/imported/gb_Creature1-removebg-preview.png-cbcba1ecbca1d032642a367cf6fe4ea3.ctex"]
 
 [params]
 
