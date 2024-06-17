@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 var tengo_llave = false
 var cantidad_de_items = 0
+var cordura = 5.0
 
 func _ready():
 	JugadorGlobal.set_ref_jugador(self)
@@ -21,6 +22,10 @@ func _physics_process(delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+
+func recibir_danio(danio):
+	cordura -= danio
+	print(cordura)
 
 func agarrar_item(item_agarrado):
 #consigue referencia de la escena del ancestro
