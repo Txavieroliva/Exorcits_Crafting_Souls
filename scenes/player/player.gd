@@ -4,6 +4,9 @@ const SPEED = 300.0
 var tengo_llave = false
 var cantidad_de_items = 0
 
+func _ready():
+	JugadorGlobal.set_ref_jugador(self)
+ 
 func _physics_process(delta):
 
 	var direction = Input.get_axis("ui_left", "ui_right")

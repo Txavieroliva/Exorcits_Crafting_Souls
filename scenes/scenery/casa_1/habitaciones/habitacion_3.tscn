@@ -13,18 +13,26 @@ script = ExtResource("1_gantr")
 [node name="limite" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(11, 318)
 scale = Vector2(1.8354, 2.36259)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite2" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(538, 50)
 scale = Vector2(24.6117, 0.530338)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite3" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(277, 431)
 scale = Vector2(1.98883, 1.68747)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite4" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(155, 594)
 scale = Vector2(7.93596, -0.460405)
+collision_layer = 4
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.227451, 0.188235, 0.345098, 1)
@@ -48,10 +56,14 @@ scale = Vector2(0.981255, 0.41928)
 [node name="limite5" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(657, 273)
 scale = Vector2(16.9698, -0.417414)
+collision_layer = 4
+collision_mask = 3
 
 [node name="limite6" parent="." instance=ExtResource("2_752y2")]
 position = Vector2(966, 179)
 scale = Vector2(3.83651, 1.12274)
+collision_layer = 4
+collision_mask = 3
 
 [node name="habitacion_4" parent="." instance=ExtResource("3_uyphq")]
 z_index = 1

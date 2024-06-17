@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://5mfw38txtgmu"]
+[gd_scene load_steps=9 format=3 uid="uid://5mfw38txtgmu"]
 
 [ext_resource type="Texture2D" uid="uid://5ll3o0cnw0bl" path="res://assets/piso.png" id="1_11203"]
 [ext_resource type="Script" path="res://scenes/scenery/casa_1/habitaciones_scripts/habitaciones_casa_1.gd" id="1_agv3b"]
 [ext_resource type="PackedScene" uid="uid://b8qaln2kgg8xd" path="res://scenes/player/player.tscn" id="3_3k6rq"]
 [ext_resource type="PackedScene" uid="uid://0ec2blm5og34" path="res://scenes/puertas/puerta.tscn" id="3_t07p7"]
+[ext_resource type="PackedScene" uid="uid://cxl2gyyd6b5xm" path="res://scenes/enemigos/alma_en_pena/alma_en_pena.tscn" id="5_6lpgf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfd2i"]
 size = Vector2(198, 164)
@@ -17,6 +18,16 @@ size = Vector2(20, 497)
 [node name="Habitacion2" type="Node2D"]
 script = ExtResource("1_agv3b")
 
+[node name="Player" parent="." instance=ExtResource("3_3k6rq")]
+z_index = 1
+position = Vector2(1043, 391)
+
+[node name="Enemigo" parent="." instance=ExtResource("5_6lpgf")]
+z_index = 1
+position = Vector2(347, 338)
+scale = Vector2(2.34747, 1.52331)
+collision_layer = 0
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(574, 326.25)
 scale = Vector2(2.34747, 1.52331)
@@ -25,6 +36,8 @@ texture = ExtResource("1_11203")
 [node name="Limites" type="Node" parent="."]
 
 [node name="Limite" type="StaticBody2D" parent="Limites"]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite"]
 position = Vector2(81, 72)
@@ -32,6 +45,8 @@ shape = SubResource("RectangleShape2D_wfd2i")
 
 [node name="Limite_1" type="StaticBody2D" parent="Limites"]
 position = Vector2(572, 41)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_1"]
 position = Vector2(-5, 22)
@@ -39,6 +54,8 @@ shape = SubResource("RectangleShape2D_l8w2v")
 
 [node name="Limite_2" type="StaticBody2D" parent="Limites"]
 position = Vector2(573, 60)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_2"]
 position = Vector2(5.5, 655)
@@ -46,6 +63,8 @@ shape = SubResource("RectangleShape2D_l8w2v")
 
 [node name="Limite_3" type="StaticBody2D" parent="Limites"]
 position = Vector2(974, 0)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite_3"]
 position = Vector2(89, 72)
@@ -53,6 +72,8 @@ shape = SubResource("RectangleShape2D_wfd2i")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Limites"]
 position = Vector2(-7, 408)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D"]
 position = Vector2(0, -2.5)
@@ -60,6 +81,8 @@ shape = SubResource("RectangleShape2D_j4sfu")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Limites"]
 position = Vector2(1160, 405)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/StaticBody2D2"]
 position = Vector2(0, -2.5)
@@ -72,9 +95,6 @@ scale = Vector2(-0.981128, 0.558589)
 [node name="habitacion_3" parent="." instance=ExtResource("3_t07p7")]
 position = Vector2(91, 79)
 scale = Vector2(1, 0.717172)
-
-[node name="Player" parent="." instance=ExtResource("3_3k6rq")]
-position = Vector2(1043, 391)
 
 [node name="Habitacion1Pos" type="Marker2D" parent="."]
 position = Vector2(1058, 173)
